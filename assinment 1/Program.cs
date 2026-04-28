@@ -5,7 +5,7 @@ client_type = Console.ReadLine();
 Console.Write("enter reciept value : ");
 reciept_value = Convert.ToDouble(Console.ReadLine());
 double descount;
-switch (client_type) {
+switch (client_type.ToLower()) {
     case "Gold":
         descount = reciept_value * 2 / 10;
         break;
@@ -22,7 +22,7 @@ switch (client_type) {
 
 
 if (reciept_value > 100) {
-    switch (client_type)
+    switch (client_type.ToLower())
     {
         case "Gold":
             descount += reciept_value * 5 / 100;
